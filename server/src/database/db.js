@@ -1,5 +1,5 @@
 const mongoose= require("mongoose")
-const { mongodbUrl } = require("../database/secret")
+const { mongodbUrl } = require("../secret")
 
 const connectDB= async (options={})=>{
     try {
