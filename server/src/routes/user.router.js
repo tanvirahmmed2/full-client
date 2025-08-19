@@ -1,20 +1,12 @@
 const express = require("express");
 const { User } = require("../model/user.model");
+const { registerUser } = require("../controllers/user.controller");
 const userRouter = express.Router();
 
 userRouter.get("/", (req, res) => {
   res.send("user router activated");
 });
 
-userRouter.post("/", (req, res) => {
-  const { username, password } = req.body;
-
-  const newUser= new User({username, password})
-
-  res.status(200).send({
-    message: "post on user activated",
-    payload: { newUser }
-  });
-});
+userRouter.post("/", registerUser);
 
 module.exports = userRouter;
