@@ -13,10 +13,12 @@ const getUser= async(req,res,next)=>{
 
 
 
-const registerUser = (req, res) => {
+const registerUser = async(req, res) => {
   const { username, password } = req.body;
 
-  const newUser = new User({ username, password });
+  const newUser = { username, password }
+  await User.create(newUser)
+
 
   res.status(200).send({
     message: "post on user activated",
