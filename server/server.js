@@ -1,10 +1,35 @@
 const express = require("express");
+const cors= require("cors")
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+app.use(cors())
 
-app.get("/", (req, res) => {
-  res.send("Server is ready");
+const people=[
+  {
+    id:1,
+    name: "Tanvir Ahmmed",
+    age: 23
+  },
+  {
+    id:2,
+    name: "Tanvir Ahmmed",
+    age: 23
+  },
+  {
+    id:3,
+    name: "Tanvir Ahmmed",
+    age: 23
+  },
+  {
+    id:4,
+    name: "Tanvir Ahmmed",
+    age: 23
+  },
+]
+const PORT = process.env.PORT || 5000;
+
+app.get("/api/people", (req, res) => {
+  res.json(people);
 });
 
 app.listen(PORT, () => {
