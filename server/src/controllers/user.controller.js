@@ -4,10 +4,7 @@ const { User } = require("../model/user.model");
 const getUser= async(req,res,next)=>{
     const user= await User.find({})
     
-    res.status(200).send({
-        message: "user returned",
-        payload: {user}
-    })
+    res.status(200).send(user)
 
 }
 
