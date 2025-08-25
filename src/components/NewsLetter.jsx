@@ -7,7 +7,7 @@ const NewsLetter = () => {
       <p className='text-2xl '>Subscribe to our newsletter and stay update</p>
       <div className='flex items-center justify-center flex-col md:flex-row w-2/3 gap-6'>
         <input type="email" className='w-96 ml-10 px-5 p-2 outline-none border-2 rounded-xl' />
-        <button className='w-36 px-5 p-2 bg-black text-white rounded-xl'>Subscribe</button>
+        <button className='w-36 px-5 p-2 bg-black cursor-pointer text-white rounded-xl'>Subscribe</button>
       </div>
     </div>
   )

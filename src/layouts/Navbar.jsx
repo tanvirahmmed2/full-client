@@ -5,7 +5,7 @@ import { CiShoppingCart } from "react-icons/ci";
 const Navbar = () => {
   return (
     <div className='fixed z-50 bg-white shadow-lg top-0 w-full h-14 px-6 flex flex-row items-center justify-between'>
-      <a href="/" className=' font-bold text-3xl'>Client</a>
+      <a href="/" className=' font-bold text-3xl'>SHOPER</a>
       <div className='w-auto h-14 hidden lg:flex items-center justify-center gap-2'>
         <Link to="/" className=' px-6 h-14 flex items-center hover:border-b-2'>Shop</Link>
         <Link to="/mens" className=' px-6 h-14 flex items-center hover:border-b-2'>Men</Link>
