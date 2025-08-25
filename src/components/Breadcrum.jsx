@@ -4,7 +4,7 @@ const Breadcrum = (props) => {
   const {product} =props
   return (
     <div className='flex w-full gap-4 mt-20'>
-      Home <img src={arrow_icon} alt="" /> SHOP <img src={arrow_icon} alt="" /> {product.category} <img src={arrow_icon} alt="" /> {product.name} <img src={arrow_icon} alt="" />
+      Home <img src={arrow_icon} alt="" /> Shop <img src={arrow_icon} alt="" /> {product.category} <img src={arrow_icon} alt="" /> {product.name} <img src={arrow_icon} alt="" />
     </div>
   )
 }
