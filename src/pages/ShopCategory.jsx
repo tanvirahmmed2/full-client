@@ -10,7 +10,7 @@ const ShopCategory = (props) => {
       <img src={props.banner} alt="" className='' />
       <div className='w-full flex flex-col gap-8 items-center justify-between'>
 
-        <div className='flex flex-row items-center justify-between gap-8'>
+        <div className='flex flex-row items-center justify-between gap-8 w-full px-4'>
           <p>
             <span>Showing 1-12</span>
           </p>
@@ -29,7 +29,9 @@ const ShopCategory = (props) => {
             }
           })}
         </div>
+
       </div>
+      <button className='p-2 px-4 bg-gray-100 border-2 border-black  rounded-2xl'>Load more</button>
     </div>
   )
 }
