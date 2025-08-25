@@ -9,6 +9,11 @@ import Product from './pages/Product';
 import Cart from './pages/Cart';
 import Signup from './user/Signup';
 
+
+import men_banner from "./components/Assets/banner_mens.png"
+import women_banner from "./components/Assets/banner_women.png"
+import kid_banner from "./components/Assets/banner_kids.png"
+
 function App() {
   return (
     <div className="w-full relative overflow-x-hidden">
@@ -16,9 +21,9 @@ function App() {
       <div className='w-full mt-16 px-2'>
       <Routes>
         <Route path="/" element={<Shop/>}/>
-        <Route path="/mens" element={<ShopCategory category="mens"/>}/>
-        <Route path="/womens" element={<ShopCategory category="womens"/>}/>
-        <Route path="/kids" element={<ShopCategory category="kids"/>}/>
+        <Route path="/mens" element={<ShopCategory banner={men_banner} category="mens"/>}/>
+        <Route path="/womens" element={<ShopCategory banner={women_banner} category="womens"/>}/>
+        <Route path="/kids" element={<ShopCategory banner={kid_banner} category="kids"/>}/>
         <Route path='/product' element={<Product/>}>
           <Route path=':productId' element={<Product/>}/>
         </Route>

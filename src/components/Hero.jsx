@@ -6,7 +6,7 @@ import hero_img from "../components/Assets/hero_image.png"
 
 const Hero = () => {
     return (
-        <div className='h-screen flex w-full flex-col items-center justify-between lg:flex-row '>
+        <div className='min-h-screen flex w-full flex-col items-center justify-between lg:flex-row '>
 
             <div className='flex-1 flex flex-col justify-center gap-5 p-44'>
                 <h2 className='text-blue-600 text-2xl font-semibold'>New Arrival Only</h2>
