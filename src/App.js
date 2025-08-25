@@ -11,9 +11,9 @@ import Signup from './user/Signup';
 
 function App() {
   return (
-    <div className="w-full relative">
+    <div className="w-full relative overflow-x-hidden">
       <Navbar/>
-      <div className='w-full mt-16'>
+      <div className='w-full mt-16 px-2'>
       <Routes>
         <Route path="/" element={<Shop/>}/>
         <Route path="/mens" element={<ShopCategory category="mens"/>}/>
