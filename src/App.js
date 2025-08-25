@@ -5,24 +5,31 @@ import Footer from "./layouts/Footer";
 import Navbar from "./layouts/Navbar";
 import Shop from './layouts/Shop';
 import ShopCategory from './pages/ShopCategory';
-import Products from './pages/Products';
+import Product from './pages/Product';
 import Cart from './pages/Cart';
 import Signup from './user/Signup';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center relative">
+    <div className="w-full relative">
       <Navbar/>
+      <div className='w-full mt-16'>
       <Routes>
         <Route path="/" element={<Shop/>}/>
-        <Route path="/login" element={<Login/>}/>
         <Route path="/mens" element={<ShopCategory category="mens"/>}/>
         <Route path="/womens" element={<ShopCategory category="womens"/>}/>
         <Route path="/kids" element={<ShopCategory category="kids"/>}/>
-        <Route path='/product' element={<Products/>}/>
+        <Route path='/product' element={<Product/>}>
+          <Route path=':productId' element={<Product/>}/>
+        </Route>
+
+
+
         <Route path='/cart' element={<Cart/>}/>
+        <Route path="/login" element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
       </Routes>
+      </div>
       <Footer/>
 
     </div>
