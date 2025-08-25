@@ -1,8 +1,9 @@
-import Home from "./layouts/Home";
+
 import {Routes, Route} from 'react-router-dom'
 import Login from "./user/Login";
 import Footer from "./layouts/Footer";
 import Navbar from "./layouts/Navbar";
+import Home from './layouts/Home';
 
 function App() {
   return (
