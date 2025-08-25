@@ -1,12 +1,13 @@
-import Home from "./pages/Home";
+import Home from "./layouts/Home";
 import {Routes, Route} from 'react-router-dom'
-import Login from "./pages/Login";
-import Footer from "./pages/Footer";
+import Login from "./user/Login";
+import Footer from "./layouts/Footer";
+import Navbar from "./layouts/Navbar";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-      
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center relative">
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/login" element={<Login/>}/>
