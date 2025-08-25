@@ -1,6 +1,8 @@
 import React from 'react'
 import Hero from '../components/Hero'
-import Popular from "../components/popular/Popular"
+import Popular from "../components/Popular"
+import Offers from '../components/Offers'
+import NewCollections from '../components/NewCollections'
 
 
 const Shop = () => {
@@ -8,6 +10,8 @@ const Shop = () => {
     <div>
       <Hero/>
       <Popular/>
+      <Offers/>
+      <NewCollections/>
     </div>
   )
 }
