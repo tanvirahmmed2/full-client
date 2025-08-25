@@ -16,7 +16,7 @@ const ProductDisplay = (props) => {
                 <img src={product.image} alt="" />
             </div>
         </div>
-
+    
 
         <div className='w-full'>
             <h1>{product.name}</h1>
