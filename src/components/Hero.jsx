@@ -12,11 +12,11 @@ const Hero = () => {
                 <h2 className='text-blue-600 text-2xl font-semibold'>New Arrival Only</h2>
                 <div>
                     <div>
-                        <p className='text-blue-600 text-8xl font-bold'>new</p>
+                        <p className='text-blue-600 text-6xl font-bold'>new</p>
                         <img src={hand_icon} alt="" />
                     </div>
-                    <p className='text-blue-600 text-8xl font-bold'>collections</p>
-                    <p className='text-blue-600 text-8xl font-bold'>for everyone</p>
+                    <p className='text-blue-600 text-6xl font-bold'>collections</p>
+                    <p className='text-blue-600 text-6xl font-bold'>for everyone</p>
                 </div>
                 <div className='w-auto flex flex-row items-center justify-center bg-red-500 p-3 rounded-xl gap-6 text-white'>
 
