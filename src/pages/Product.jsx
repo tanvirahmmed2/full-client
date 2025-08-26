@@ -8,9 +8,9 @@ import RelatedProducts from '../components/RelatedProducts'
 
 const Product = () => {
   
-  const { all_products } = useContext(ShopContext)
+  const { all_product } = useContext(ShopContext)
   const {productId} =useParams()
-  const Products= all_products.find((e)=> e.id=== Number(productId))
+  const Products= all_product.find((e)=> e.id=== Number(productId))
   return (
     <div>
       <Breadcrum product={Products}/>

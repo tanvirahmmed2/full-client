@@ -4,7 +4,7 @@ import Item from "../components/Item"
 
 const RelatedProducts = () => {
   return (
-    <div className='flex flex-col min-h-screen w-full items-center'>
+    <div className='flex gap-6 flex-col min-h-screen w-full items-center'>
       <h1 className='text-3xl font-semibold text-black'>RELATED PRODUCTS</h1>
       <div className=' w-full grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] justify-items-center'>
         {

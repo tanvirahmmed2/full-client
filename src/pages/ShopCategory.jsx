@@ -4,7 +4,7 @@ import dropdown_icon from "../components/Assets/dropdown_icon.png"
 import Item from "../components/Item"
 
 const ShopCategory = (props) => {
-  const { all_products } = useContext(ShopContext)
+  const { all_product } = useContext(ShopContext)
   return (
     <div className='w-full flex flex-col items-center justify-center gap-6'>
       <img src={props.banner} alt="" className='' />
@@ -20,7 +20,7 @@ const ShopCategory = (props) => {
           </p>
         </div>
         <div className='w-full grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6 '>
-          {all_products.map((item) => {
+          {all_product.map((item) => {
             if (props.category === item.category) {
               return <Item key={item.id} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
             }
