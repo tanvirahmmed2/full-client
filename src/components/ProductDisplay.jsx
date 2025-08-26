@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import star_icon from "../components/Assets/star_icon.png"
 import star_dull_icon from "../components/Assets/star_dull_icon.png"
+import {ShopContext} from "../context/ShopContext"
+
+
 const ProductDisplay = (props) => {
     const { product } = props
+
+    const {addToCart}= useContext(ShopContext)
     return (
         <div  className='w-full flex flex-col py-8 lg:flex-row gap-8'>
             <div className='w-full flex flex-row items-start justify-center gap-4'>
@@ -49,7 +54,7 @@ const ProductDisplay = (props) => {
                         <p className='p-1 px-2 border-2 rounded-lg hover:bg-black hover:text-white transition duration-300 cursor-pointer'>2XL</p>
                     </div>
                 </div>
-                <button className='p-1 px-2 border-2 rounded-xl hover:bg-black hover:text-white transition duration-500'>Add to cart</button>
+                <button onClick={()=>{addToCart(product.id)}} className='p-1 px-2 border-2 rounded-xl hover:bg-black hover:text-white transition duration-500'>Add to cart</button>
                 <p><span>Category: </span> <span>{product.category}</span></p>
                 <p><span>Tags: </span> <span>Modern, Latest</span></p>
 
