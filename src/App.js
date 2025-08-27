@@ -16,7 +16,7 @@ import kid_banner from "./components/Assets/banner_kids.png"
 
 function App() {
   return (
-    <div className="w-full bg-gradient-to-br from-purple-200 to-white relative overflow-x-hidden">
+    <div className="w-full bg-gradient-to-br from-purple-200 to-rose-200 relative overflow-x-hidden">
       <Navbar/>
       <div className='w-full mt-16 px-2'>
       <Routes>

@@ -19,7 +19,7 @@ const ShopCategory = (props) => {
 
           </p>
         </div>
-        <div className='w-full grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6 '>
+        <div className='w-full grid grid-cols-[repeat(auto-fit,minmax(192px,1fr))] gap-6 justify-items-center'>
           {all_product.map((item) => {
             if (props.category === item.category) {
               return <Item key={item.id} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
