@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import hand_icon from "../components/Assets/hand_icon.png"
 import arrow_icon from "../components/Assets/arrow.png"
@@ -18,12 +19,12 @@ const Hero = () => {
                     <p className='text-black text-6xl font-bold'>collections</p>
                     <p className='text-black text-6xl font-bold'>for everyone</p>
                 </div>
-                <div className='w-auto flex flex-row items-center justify-center bg-red-500 p-3 rounded-xl gap-6 text-white'>
+                <Link to='/newcollection' className='w-auto flex flex-row items-center justify-center bg-red-500 p-3 rounded-xl gap-6 text-white'>
 
                     <p>Latest</p>
                     <img src={arrow_icon} alt="" />
 
-                </div>
+                </Link>
             </div>
             <div className='flex flex-1 items-center justify-center'>
                 <img src={hero_img} alt="" />

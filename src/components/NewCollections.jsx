@@ -4,7 +4,7 @@ import Item from './Item'
 
 const NewCollections = () => {
   return (
-    <div className='flex flex-col items-center gap-3 min-h-screen w-full justify-center'>
+    <div className='flex flex-col items-center gap-3 mu-16 min-h-screen w-full justify-center'>
       
       <h1 className='text-2xl font-semibold'>NEW COLLECTIONS</h1>
       <div className='mt-12 grid grid-cols-[repeat(auto-fit,minmax(192px,1fr))] r w-full gap-6 justify-items-center  '>
