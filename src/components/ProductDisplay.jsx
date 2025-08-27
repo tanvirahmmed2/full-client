@@ -34,10 +34,10 @@ const ProductDisplay = (props) => {
                     <p>(122)</p>
                 </div>
                 <div className='flex flex-row items-center juc gap-4'>
-                    <div className='text-3xl font-semibold' >
+                    <div className='text-3xl font-semibold ' >
                         ${product.new_price}
                     </div>
-                    <div className='text-xl font-semibold text-red-600'>
+                    <div className='text-xl font-semibold text-red-600 line-through'>
                         ${product.old_price}
                     </div>
                 </div>

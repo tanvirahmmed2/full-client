@@ -10,7 +10,7 @@ const Item = (props) => {
             <div className='text-3xl font-semibold' >
                 ${props.new_price}
             </div>
-            <div className='text-xl font-semibold text-red-600'>
+            <div className='text-xl font-semibold text-red-600 line-through'>
                 ${props.old_price}
             </div>
         </div>
