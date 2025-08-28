@@ -3,7 +3,7 @@ import data_product from "./Assets/data"
 import Item from './Item'
 const Popular = () => {
   return (
-    <div className='flex flex-col items-center gap-3 h-screen w-full justify-center'>
+    <div className='flex flex-col items-center gap-4 h-screen w-full justify-center'>
       
       <h1 className='text-2xl font-semibold'>POPULAR IN WOMEN</h1>
       <div className='mt-12 flex items-center justify-center w-full flex-row gap-6'>

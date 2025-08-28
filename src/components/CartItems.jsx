@@ -40,7 +40,7 @@ const CartItems = () => {
         }
         return null;
       })}
-      <div className="flex gap-20 w-full flex-row items-center justify-center">
+      <div className="flex gap-20 w-full flex-col md:flex-row items-center justify-center">
         <div className="flex-1 flex flex-col  gap-5 w-full">
           
           <h1 className="text-2xl font-semibold ">Cart total</h1>
