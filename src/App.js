@@ -1,19 +1,18 @@
 
 import {Routes, Route} from 'react-router-dom'
-import Login from "./user/Login";
 import Footer from "./layouts/Footer";
 import Navbar from "./layouts/Navbar";
 import Shop from './layouts/Shop';
 import ShopCategory from './pages/ShopCategory';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
-import Signup from './user/Signup';
 
 
 import men_banner from "./components/Assets/banner_mens.png"
 import women_banner from "./components/Assets/banner_women.png"
 import kid_banner from "./components/Assets/banner_kids.png"
 import NewCollections from './components/NewCollections';
+import SignInSignUp from './user/SignInSignUp';
 
 function App() {
   return (
@@ -33,8 +32,7 @@ function App() {
 
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/newcollection' element={<NewCollections/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/signin' element={<SignInSignUp/>}/>
       </Routes>
       </div>
       <Footer/>
