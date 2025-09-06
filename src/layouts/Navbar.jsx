@@ -16,7 +16,8 @@ const Navbar = () => {
 
       </div>
       <div className='w-auto h-14 flex flex-row items-center justify-center gap-4'>
-        <Link to="/signin"className='px-4 h-8 border-2 rounded-2xl  flex items-center'>Login</Link>
+        {localStorage.getItem('auth-token')? <button onClick={()=>{localStorage.removeItem('auth-token'); window.location.replace('/')}} className='px-4 h-8 border-2 rounded-2xl  flex items-center'>Logout</button>: <Link to="/signin"className='px-4 h-8 border-2 rounded-2xl  flex items-center'>SignIn</Link>}
+        
         <Link to="/cart" className='px-4 h-14 flex gap-2 items-center text-3xl'><CiShoppingCart/><span className='text-xs text-red-700 font-semibold'>{getTotalCartItems()}</span></Link>
       </div>
     </div>

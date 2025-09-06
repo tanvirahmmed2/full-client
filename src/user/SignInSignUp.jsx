@@ -54,7 +54,7 @@ const SignInSignUp = () => {
 
         if(responseData.success){
             localStorage.setItem('auth-token', responseData.token)
-            setState('SignIn')
+            window.location.replace('/')
         }
         else{
             alert(responseData.errors)
