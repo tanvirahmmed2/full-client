@@ -6,7 +6,7 @@ const Popular = () => {
   const [popularinwomen, setPopularInWomen] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:5000/popularinwomen')
+    fetch('http://localhost:5000/popularinmen')
       .then((res) => res.json())
       .then((data) => setPopularInWomen(data))
   }, [])
@@ -14,7 +14,7 @@ const Popular = () => {
   return (
     <div className='flex flex-col items-center gap-4 h-screen w-full justify-center'>
 
-      <h1 className='text-2xl font-semibold'>POPULAR IN WOMEN</h1>
+      <h1 className='text-2xl font-semibold'>POPULAR IN MEN</h1>
       <div className='mt-12 flex items-center justify-center w-full flex-row gap-6'>
         {
           popularinwomen.map((item) => {
