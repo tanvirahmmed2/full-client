@@ -2,7 +2,18 @@ import React from 'react'
 import { useState } from 'react'
 
 const SignInSignUp = () => {
+    
+    
     const [state, setState] = useState('SignIn')
+
+    const signin= async()=>{
+        
+    }
+    const signup= async()=>{
+
+    }
+
+
     return (
         <div className='w-full h-[90vh] flex items-center justify-center'>
             <div className='w-[400px]  h-[600px] m-auto p-10 gap-6  flex flex-col items-center justify-center bg-white border-red-500 border-2 rounded-xl'>
@@ -12,7 +23,7 @@ const SignInSignUp = () => {
                     <input className='border-2 px-4 p-2 rounded-xl w-full outline-none' type="email" placeholder='email address' />
                     <input className='border-2 px-4 p-2 rounded-xl w-full outline-none' type="password" placeholder='password' />
                 </div>
-                <button className='p-1 px-2  rounded-xl w-full bg-red-600 text-white'>Continue</button>
+                <button onClick={()=>{state==='SignIn'? signin(): signup()}} className='p-1 px-2  rounded-xl w-full bg-red-600 text-white'>Continue</button>
                 {state === "SignUp" ? <p onClick={() => { setState('SignIn') }} className='cursor-pointer'>already user? Login Here</p> : <></>}
                 {state === "SignIn" ? <p onClick={() => { setState('SignUp') }} className='cursor-pointer'>new user? click Here</p> : <></>}
                 <div className='w-full flex flex-row items-center justify-center gap-4'>
