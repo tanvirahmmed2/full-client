@@ -5,6 +5,7 @@ const SignInSignUp = () => {
     
     
     const [state, setState] = useState('SignIn')
+    const [err,setErr]= useState('')
     const [formData, setFormData]= useState({
         username: '',
         email: '',
@@ -32,6 +33,10 @@ const SignInSignUp = () => {
 
         if(responseData.success){
             localStorage.setItem('auth-token', responseData.token)
+            window.location.replace('/')
+        }
+        else{
+            setErr(responseData.errors)
         }
     }
 
@@ -45,6 +50,7 @@ const SignInSignUp = () => {
                     <input className='border-2 px-4 p-2 rounded-xl w-full outline-none' type="email" name='email' placeholder='email address' value={formData.email} onChange={changehandler} />
                     <input className='border-2 px-4 p-2 rounded-xl w-full outline-none' type="password" name='password' placeholder='password' value={formData.password} onChange={changehandler} />
                 </div>
+                <p>{err}</p>
                 <button onClick={()=>{state==='SignIn'? signin(): signup()}} className='p-1 px-2  rounded-xl w-full bg-red-600 text-white'>Continue</button>
                 {state === "SignUp" ? <p onClick={() => { setState('SignIn') }} className='cursor-pointer'>already user? Login Here</p> : <></>}
                 {state === "SignIn" ? <p onClick={() => { setState('SignUp') }} className='cursor-pointer'>new user? click Here</p> : <></>}
