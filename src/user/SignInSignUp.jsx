@@ -5,7 +5,7 @@ const SignInSignUp = () => {
     
     
     const [state, setState] = useState('SignIn')
-    const [err,setErr]= useState('')
+    
     const [formData, setFormData]= useState({
         username: '',
         email: '',
@@ -17,6 +17,27 @@ const SignInSignUp = () => {
     }
     const signin= async()=>{
         console.log('signin function executed', formData)
+        let responseData;
+        await fetch('http://localhost:5000/signin',{
+            method: 'POST',
+            headers:{
+                Accpet: 'application/form-data',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        }).then((response)=> response.json()).then((data)=> responseData=data)
+
+        if(responseData.success){
+            localStorage.setItem('auth-token', responseData.token)
+            window.location.replace('/')
+            
+        }
+        else{
+            alert(responseData.errors)
+        }
+
+
+
     }
     const signup= async()=>{
         console.log('signup function executed', formData)
@@ -33,10 +54,10 @@ const SignInSignUp = () => {
 
         if(responseData.success){
             localStorage.setItem('auth-token', responseData.token)
-            window.location.replace('/')
+            setState('SignIn')
         }
         else{
-            setErr(responseData.errors)
+            alert(responseData.errors)
         }
     }
 
@@ -49,8 +70,9 @@ const SignInSignUp = () => {
                     {state === "SignUp" ? <input className='border-2 px-4 p-2 rounded-xl w-full outline-none' type="text" placeholder='username' name='username' value={formData.username} onChange={changehandler}  /> : <></>}
                     <input className='border-2 px-4 p-2 rounded-xl w-full outline-none' type="email" name='email' placeholder='email address' value={formData.email} onChange={changehandler} />
                     <input className='border-2 px-4 p-2 rounded-xl w-full outline-none' type="password" name='password' placeholder='password' value={formData.password} onChange={changehandler} />
+                    
                 </div>
-                <p>{err}</p>
+                
                 <button onClick={()=>{state==='SignIn'? signin(): signup()}} className='p-1 px-2  rounded-xl w-full bg-red-600 text-white'>Continue</button>
                 {state === "SignUp" ? <p onClick={() => { setState('SignIn') }} className='cursor-pointer'>already user? Login Here</p> : <></>}
                 {state === "SignIn" ? <p onClick={() => { setState('SignUp') }} className='cursor-pointer'>new user? click Here</p> : <></>}
